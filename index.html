@@ -730,6 +730,43 @@
         font-size: 13px;
       }
     }
+   /* Chat Widget - Fixed Position (always visible while scrolling) */
+    [data-ea-chat],
+    [data-chat-widget],
+    iframe[src*="chat.e-ai.ladcloud"],
+    .eai-widget,
+    .chat-widget * {
+      position: fixed !important;
+      bottom: 24px !important;
+      right: 24px !important;
+      z-index: 99999 !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      display: block !important;
+    }
+
+    /* Floating chat button */
+    .chat-fallback-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #c9a96e 0%, #e8d5b0 100%);
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 100000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(201, 169, 110, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 28px;
+    }
+    .chat-fallback-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(201, 169, 110, 0.7);
+    }
   </style>
 </head>
 <body>
@@ -1024,5 +1061,6 @@ submitBtn.disabled = false;
     });
   </script>
 
+  <script src="https://api.chat.e-ai.ladcloud.ru/widget/embed.js" data-widget-key="widget-019f037b-b74f-7d50-baf1-962ec17fcfdb" data-api-base-url="https://api.chat.e-ai.ladcloud.ru"></script>
 </body>
 </html>
