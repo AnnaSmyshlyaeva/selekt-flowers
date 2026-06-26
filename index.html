@@ -768,6 +768,14 @@
       box-shadow: 0 6px 25px rgba(201, 169, 110, 0.7);
     }
   </style>
+
+  /* Chat widget positioning */
+  #ea-chat-widget {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 999999 !important;
+  }
 </head>
 <body>
 
@@ -1060,6 +1068,8 @@ submitBtn.disabled = false;
       observer.observe(el);
     });
   </script>
+
+  <div id="ea-chat-widget"></div>
 
   <script src="https://api.chat.e-ai.ladcloud.ru/widget/embed.js" data-widget-key="widget-019f037b-b74f-7d50-baf1-962ec17fcfdb" data-api-base-url="https://api.chat.e-ai.ladcloud.ru"></script>
 </body>
